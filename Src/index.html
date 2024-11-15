@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knapsack problem</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../Assets/backpack(2).png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="../Assets/backpack(2).png"
+            alt="Logo"
+            style="height: 60px; width: 60px"
+          />
+        </a>
+        <a class="navbar-brand" href="#">BÀI TOÁN CÁI BALO</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trang Chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Pages/Greedy.html">Tham Lam</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Pages/BAB.html">Nhánh Cận</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Pages/DP.html">Quy Hoạch Động</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Trang Chủ -->
+    <section id="home" class="container my-5">
+      <h2>Giới Thiệu Bài Toán Cái Balo</h2>
+      <p>
+        Bài toán cái balo là một bài toán tối ưu hóa trong đó ta phải chọn các
+        vật phẩm sao cho tổng giá trị tối đa trong khi tổng trọng lượng không
+        vượt quá giới hạn của balo. Bài toán này có ứng dụng rộng rãi trong các
+        lĩnh vực lập kế hoạch, phân bổ nguồn lực, và tối ưu hóa chi phí. Có ba
+        dạng bài toán chính: CBL1, CBL2 và CBL3, mỗi dạng có phương pháp giải
+        quyết và ứng dụng khác nhau.
+      </p>
+      <ul>
+        <li>
+          <strong>CBL1</strong>: Các vật phẩm có thể được chọn với số lượng
+          không giới hạn.
+        </li>
+        <li><strong>CBL2</strong>: Các vật phẩm có số lượng giới hạn.</li>
+        <li>
+          <strong>CBL3</strong>: Mỗi vật phẩm chỉ có thể được chọn một lần (0
+          hoặc 1 lần).
+        </li>
+      </ul>
+    </section>
+
+    <!-- Hướng Dẫn -->
+    <section id="guide" class="container my-5">
+      <h2>Hướng Dẫn Sử Dụng</h2>
+      <p>Để sử dụng trang web này, bạn có thể làm theo các bước sau:</p>
+      <ol>
+        <li>Chọn loại bài toán bạn muốn giải: CBL1, CBL2, hoặc CBL3.</li>
+        <li>
+          Nhập các tham số cho bài toán: giá trị, trọng lượng, và số lượng vật
+          phẩm (nếu có).
+        </li>
+        <li>
+          Chọn thuật toán mà bạn muốn sử dụng: Tham Lam, Nhánh Cận, hoặc Quy
+          Hoạch Động.
+        </li>
+        <li>Nhấn nút "Tính toán" để xem kết quả tối ưu.</li>
+      </ol>
+    </section>
+
+    <!-- Tham Lam -->
+    <section id="greedy" class="container my-5">
+      <h2>Thuật Toán Tham Lam</h2>
+      <p>
+        Thuật toán tham lam giải quyết bài toán bằng cách chọn vật phẩm có giá
+        trị cao nhất trên mỗi đơn vị trọng lượng (value/weight) cho đến khi
+        không thể thêm vật phẩm nữa.
+      </p>
+      <h4>Ví Dụ Minh Họa</h4>
+      <p>Giả sử có các vật phẩm với giá trị và trọng lượng như sau:</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Tên Món Đồ</th>
+            <th scope="col">Giá Trị</th>
+            <th scope="col">Trọng Lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vật phẩm 1</td>
+            <td>60</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Vật phẩm 2</td>
+            <td>100</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Vật phẩm 3</td>
+            <td>120</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Với trọng lượng tối đa của balo là 50, thuật toán tham lam sẽ chọn vật
+        phẩm có giá trị cao nhất trên đơn vị trọng lượng.
+      </p>
+    </section>
+
+    <!-- Nhánh Cận -->
+    <section id="branch-bound" class="container my-5">
+      <h2>Thuật Toán Nhánh Cận</h2>
+      <p>
+        Thuật toán nhánh cận áp dụng để giải quyết bài toán knapsack với giới
+        hạn số lượng vật phẩm. Thuật toán này sử dụng phương pháp tìm kiếm và
+        loại trừ các nhánh không khả thi.
+      </p>
+      <h4>Ví Dụ Minh Họa</h4>
+      <p>
+        Giới hạn số lượng của vật phẩm sẽ làm giảm không gian tìm kiếm, giúp
+        tăng hiệu quả của thuật toán. Giả sử có các vật phẩm với giá trị và
+        trọng lượng như sau:
+      </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Tên Món Đồ</th>
+            <th scope="col">Giá Trị</th>
+            <th scope="col">Trọng Lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vật phẩm A</td>
+            <td>150</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>Vật phẩm B</td>
+            <td>200</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>Vật phẩm C</td>
+            <td>180</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Với giới hạn trọng lượng tối đa là 50, thuật toán nhánh cận sẽ phân
+        nhánh và tìm ra giải pháp tối ưu.
+      </p>
+    </section>
+
+    <!-- Quy Hoạch Động -->
+    <section id="dp" class="container my-5">
+      <h2>Thuật Toán Quy Hoạch Động</h2>
+      <p>
+        Thuật toán quy hoạch động giải quyết bài toán knapsack 0/1 bằng cách sử
+        dụng bảng để lưu trữ các giá trị tối ưu cho từng trọng lượng và số lượng
+        vật phẩm.
+      </p>
+      <h4>Ví Dụ Minh Họa</h4>
+      <p>Giả sử bạn có các vật phẩm với giá trị và trọng lượng như sau:</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Tên Món Đồ</th>
+            <th scope="col">Giá Trị</th>
+            <th scope="col">Trọng Lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vật phẩm 1</td>
+            <td>60</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Vật phẩm 2</td>
+            <td>100</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Vật phẩm 3</td>
+            <td>120</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Với thuật toán quy hoạch động, bạn sẽ xây dựng bảng DP để tìm ra kết quả
+        tối ưu cho bài toán này.
+      </p>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

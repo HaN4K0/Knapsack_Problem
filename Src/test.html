@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Thuật Tối Ưu Hóa - Trang Chính</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f7f7f7;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Giải Thuật Tối Ưu Hóa
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#algorithms">Thuật Toán</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Giới Thiệu -->
+    <section id="home" class="container my-5">
+        <h2>Giới Thiệu Bài Toán Cái Balo</h2>
+        <p>
+            Bài toán cái balo (Knapsack Problem) là một trong những bài toán tối ưu hóa cổ điển trong khoa học máy tính và toán học.
+            Mục tiêu của bài toán là tìm cách chọn các vật phẩm sao cho tổng giá trị là tối đa mà tổng trọng lượng không vượt quá giới hạn của balo.
+        </p>
+        <h4>Các thuật toán chính:</h4>
+        <ul>
+            <li><strong>Thuật toán Tham Lam (Greedy)</strong>: Lựa chọn vật phẩm dựa trên tỷ lệ giá trị/trọng lượng cao nhất.</li>
+            <li><strong>Thuật toán Nhánh Cận (Branch and Bound)</strong>: Sử dụng tìm kiếm theo cây và loại bỏ các nhánh không khả thi.</li>
+            <li><strong>Thuật toán Quy Hoạch Động (Dynamic Programming)</strong>: Xây dựng bảng lưu trữ kết quả tối ưu cho các trường hợp con.</li>
+        </ul>
+        <h4>Ứng dụng:</h4>
+        <p>Bài toán này có nhiều ứng dụng thực tế như tối ưu hóa tài nguyên, quản lý kho hàng, và lựa chọn đầu tư tài chính.</p>
+    </section>
+
+    <!-- Hướng Dẫn -->
+    <section id="guide" class="container my-5">
+        <h2>Hướng Dẫn Sử Dụng</h2>
+        <p>Để sử dụng trang web này, hãy làm theo các bước sau:</p>
+        <ol>
+            <li>Chọn mục tương ứng với loại bài toán bạn muốn giải: <strong>Tham Lam</strong>, <strong>Nhánh Cận</strong>, hoặc <strong>Quy Hoạch Động</strong>.</li>
+            <li>Nhập các tham số cần thiết như giá trị, trọng lượng của các vật phẩm và giới hạn balo.</li>
+            <li>Bấm vào nút "Tính toán" để nhận kết quả tối ưu.</li>
+            <li>Kết quả sẽ hiển thị danh sách các vật phẩm được chọn cùng tổng giá trị và trọng lượng.</li>
+        </ol>
+    </section>
+
+    <!-- Thuật Toán -->
+    <section id="algorithms" class="container my-5">
+        <h2>Các Thuật Toán Giải Quyết</h2>
+        <p>Bạn có thể xem chi tiết các thuật toán được sử dụng để giải quyết bài toán này:</p>
+        <ul>
+            <li><a href="#greedy" class="link-primary"><strong>Thuật toán Tham Lam (Greedy)</strong></a></li>
+            <li><a href="#branch-bound" class="link-primary"><strong>Thuật toán Nhánh Cận (Branch and Bound)</strong></a></li>
+            <li><a href="#dp" class="link-primary"><strong>Thuật toán Quy Hoạch Động (Dynamic Programming)</strong></a></li>
+        </ul>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
