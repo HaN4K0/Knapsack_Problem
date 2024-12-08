@@ -19,7 +19,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /* background-image: url("../Assets/Background/Blue/18.jpg"); */
+  /* background-image: url("../Assets/Background/Blue/15.jpg"); */
 }
 
 /* Cải thiện màu nền navbar */
@@ -82,7 +82,9 @@ table {
 
 /* Định dạng các tiêu đề của bảng */
 th {
-  background-color: #007bff;
+  /* background-color: #007bff; */
+  /* background-color: rgb(221 235 247); */
+  background-color: lightsteelblue;
   color: #000;
   padding: 12px;
   text-align: center;
